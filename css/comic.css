@@ -1,0 +1,65 @@
+body{background-color: #000}
+.column{
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 4;
+}
+#background-web{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-image: url("https://i.postimg.cc/CKd39qzg/29-10-2021-1.jpg");
+	opacity: 0.2;
+	filter: blur(5px);
+	z-index: 1;
+}
+.history-page{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 20px;
+	color: var(--white);
+}
+.name-page{
+	text-align: center;
+	font-size: 32px;
+	text-transform: uppercase;
+	margin: 12px;
+	color: var(--web);
+}
+.history-page span a{
+	text-decoration: none;
+	color: var(--white);
+}
+.list-chap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	margin-top: 26px;
+}
+.list-chap > li{
+	padding: 4px 8px;
+	color: var(--border);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	list-style: none;
+	transition: 1s;
+}
+.list-chap > li:hover{
+	cursor: pointer;
+	color: var(--web);
+	border: 1px solid var(--web);
+}
+.list-chap > li.choose{
+	background-color: var(--web);
+	color: var(--white);
+	border: 1px solid var(--web);
+}
+#image-source{
+	margin: 20px auto;
+	list-style: none;
+}
+#image-source > li > img{
+	width: 100%;
+}

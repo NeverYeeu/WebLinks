@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body{
+	background-color: #000;
+}
+:root{
+	--web: #2faba7;
+	--white: #ffffff;
+	--black: #000000;
+	--border: #ddd;
+}
+
+.open{
+	display: flex;
+}
+.choose{
+	color: var(--web);
+}
+#back-top{
+	position: fixed;
+	right: 20px; bottom: 20px; 
+	z-index: 5;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+}
+#back-top > a > i{
+	padding: 8px;
+	font-size: 26px;
+	display: block;
+	color: var(--web);
+}

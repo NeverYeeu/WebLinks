@@ -1,0 +1,129 @@
+.web-background{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left:0;
+	opacity: 0.4;
+	background-image : url('https://i.postimg.cc/MptsMYBw/back.jpg')
+}
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.web-column{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+	background-color: #3f3e3e;
+	height: 900px;
+	padding: 12px;
+}
+#web-nav{
+	position: fixed;
+	right: 20px; bottom: 20px;
+	background-color: #ccc;
+	padding: 6px;
+	border-radius: 4px;
+}
+#web-nav i{
+	font-size: 26px;
+	margin-top: 20px;
+	color: var(--white);
+	cursor: pointer;
+	text-shadow: 1px 4px 4px var(--black)
+} 
+#web-nav i:hover{color: var(--web);}
+#web-nav a i{text-decoration: none;}
+#box-setting{
+	background-color: rgb(28, 27, 27);
+	color: var(--white);
+	width: 400px;
+	position: fixed;
+	top: 60px; left: 0; right: 0;
+	margin: 0 auto;
+	padding: 12px;
+	border-radius: 6px;
+	box-shadow: 1px 2px 6px var(--white);
+	transform: scale(0)
+}
+#box-setting.open{
+	transform: scale(1);
+	display: block;
+}
+.wrap-set{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+}
+.setting-size{
+	background: #2b2929;
+	padding: 12px;
+}
+.setting-head{
+
+}
+.box_size{
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 8px;
+}
+.size-num{
+	width: 40px;
+	text-align: center;
+}
+.minusBtn, .plusBtn {
+	border: 1px solid var(--border);
+	padding: 4px;
+	border-radius: 50%;
+}
+.minusBtn:hover, .plusBtn:hover{
+	color: var(--web);
+	border: 1px solid var(--web);
+	cursor: pointer;
+}
+.setting-background{
+	margin-top: 12px;
+}
+.box_background {
+	display: flex;
+	gap: 8px;
+	margin-left: 20px;
+}
+.box_background > span{
+	margin-top: 10px;
+	display: block;
+	width: 30px; height: 30px;
+	border: 1px solid var(--border);
+	border-radius: 50%;
+}
+#box-display{
+	width: 100%; max-height: 160px;
+	border: 1px solid var(--border);
+	background-color: black;
+	overflow-y: scroll;
+	border-radius: 4px;
+	margin-top: 12px;
+}
+.display-column{
+	width: 80%;
+	margin: 0 auto;
+	padding: 12px;
+}
+
+.box_color{
+	background-color: #282323;
+	padding: 4px 10px;
+	margin-top: 4px;
+}
+.box_color > span{
+	display: block;
+	width: 26px; height: 26px;
+	text-align: center;
+	border: 1px solid red;
+	font-size: 16px;
+	border-radius: 50%;
+}
+.box_color >span:hover{
+	border: 1px solid var(--web);
+}

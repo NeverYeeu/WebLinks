@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 480px) {
+	#box-links{
+		grid-template-columns: 1fr;
+	}
+	.column{
+		width: 98%;
+		margin: 0 auto;
+	}
+	.links{width: 100%}
+	.link-infor{margin: 0;}
+	.box-genre_content{
+		width: 94%;
+		margin: 40px auto auto auto;
+		position: fixed;
+		top: 10px; left: 0; right: 0;
+	}
+	/* comic.html */
+	#background-web{
+		width: 100%;
+	}
+	.history-page{
+		margin-left: 20px;
+	}
+	.list-chap{
+		padding: 0;
+	}
+	#image-source{
+		padding: 0;
+	}
+	#image-source > li > img{
+		width: 100%;
+	}
+	.list-chap > li{
+		padding: 3px 8px;
+		font-size: 14px;
+	}
+	/* comix.html */
+	#content{
+		margin: 20px 8px;
+	}
+	#content > .column{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/* novel.html */
+	#box-setting{
+		width: 90%;
+	}
+	.web-column{
+		width: 100%;
+	}
+}
