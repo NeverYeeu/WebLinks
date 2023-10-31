@@ -34,14 +34,14 @@
 	display: flex;
 	gap: 8px;
 	position: relative;
+	margin-bottom: 8px;
 }
 .chap-change{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 	background-color: #393838;
-	border: 1px solid #ccc;
+	border: 4px double #ccc;
 	gap: 12px;
 }
 .numChapter{
@@ -99,6 +99,64 @@
 }
 .infor-href:hover{opacity: 0.8}
 
+.notice-btn{
+	position: absolute;
+	font-size: 22px;
+	color: rgb(242, 109, 85);
+	right: 4px; top: 4px;
+	opacity: 0;
+}
+.link-infor:hover .notice-btn{opacity: 1;}
+.wrap-edit{
+	display: flex; 
+	gap: 12px;
+	justify-content: space-between;
+	border-top: 1px dotted tomato	;
+}
+.wrap-edit > .edit-repair,
+.wrap-edit > .edit-delete{
+	border: 1px solid #4c4b4b;
+	padding: 4px 18px;
+	border-radius: 4px;
+	margin-top: 20px;
+	cursor: pointer;
+	color: #fff;
+}
+.wrap-edit > .edit-repair{
+	padding: 4px 46px;
+	background: rgb(250, 115, 91);
+}
+.wrap-edit > .edit-delete{
+	background: tomato;
+	opacity: 0.6;
+}
+.wrap-edit > .edit-delete:hover{opacity: 1}
+.wrap-edit > .edit-repair:hover{
+	background-color: tomato;
+}
+.wrap-input > div{
+	background-color: #313030;
+	margin: 12px 0;
+	padding: 8px;
+	border-radius: 4px;
+}
+.input-name{
+	display: flex;
+}
+.wrap-input label{
+	display: block;
+	width: 100%;
+	color: #fff;
+}
+.wrap-input input {
+	padding: 4px 12px;
+	width: 100%;
+	margin-top: 8px;
+	outline: none;
+	color: #fff;
+	background-color: #1d1c1c;
+}
+/* ----------------------------------------------------------------------- */
 #box-icon{
 	position: fixed;
 	bottom: 20px; left: 20px;
@@ -225,7 +283,6 @@
 	background-color: var(--web);
 	border: 1px solid var(--web)
 }
-
 .read-x{
 	display: flex;
 	justify-content: center;
@@ -240,4 +297,51 @@
 }
 .read-x{
 	font-size: 26px;
+}
+/* BOX-ITEM------------------------------------------------------------------------------ */
+.box-item{
+	position: relative;
+	z-index: 10;
+	width: 500px;
+	margin: 200px auto;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #343333;
+}
+.box-item p{
+	font-size: 26px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	color: #fff;
+}
+.box-item > div {
+	margin-bottom: 18px;
+	color: #fff;
+}
+.item-wrap{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 4px;
+
+}
+.box-item > div label{
+	margin-left: 12px;
+}
+.box-item > div input{
+	padding: 4px 12px;
+	width: 100%;
+	margin-top: 8px;
+	outline: none;
+	color: #fcf5f5;
+	background-color: #322f2f;
+}
+.item-btn{
+	display: flex;
+	justify-content: center;
+	padding: 6px 26px;
+	background-color: tomato;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 1px 2px 3px #fff;	
 }
