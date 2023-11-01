@@ -16,14 +16,17 @@
 		<div class="column">
 			<div class="column-head">Manhua</div>
 			<div class="links" id="manhua"></div>
+			<i class="fa-solid fa-plus extra-btn"></i>
 		</div>
 		<div class="column">
 			<div class="column-head">Manhwa</div>
 			<div class="links" id="manhwa"></div>
+			<i class="fa-solid fa-plus extra-btn"></i>
 		</div>
 		<div class="column">
 			<div class="column-head">Manga</div>
 			<div class="links" id="manga"></div>
+			<i class="fa-solid fa-plus extra-btn"></i>
 		</div>
 	</div>
 	<div class="box-genre">
@@ -49,36 +52,39 @@
 		<i class="fa-solid fa-bars-staggered genre-btn"></i>
 	</div>
 	<div class="box-item">
-		<p>Bạn Muốn Thêm Truyện</p>
-		<div class="item-wrap">
-			<div class="item_nameComic">
-				<label for="">Name Comic</label>
-				<input type="text" name="itemNameComic" placeholder="Name Comic">
+		<div class="wrap-infor">
+			<p>Thêm truyện vào - <span id="genre-head"></span></p>
+			<i class="fa-solid fa-xmark close-btn"></i>
+			<div class="item-wrap">
+				<div class="item_nameComic">
+					<label for="">Name Comic</label>
+					<input type="text" name="itemNameComic" placeholder="Name Comic">
+				</div>
+				<div class="item_nameCharacter">
+					<label for="">Name Character</label>
+					<input type="text" name="itemnameCharacter" placeholder="Name Character">
+				</div>
 			</div>
-			<div class="item_nameCharacter">
-				<label for="">Name Character</label>
-				<input type="text" name="itemnameCharacter" placeholder="Name Character">
+			<div class="item_imageComic">
+				<label for="">Image</label>
+				<input type="text" name="itemimageComic" placeholder="Image">
 			</div>
-		</div>
-		<div class="item_imageComic">
-			<label for="">Image</label>
-			<input type="text" name="itemimageComic" placeholder="Image">
-		</div>
-		<div class="item_linkComic">
-			<label for="">Link Comic</label>
-			<input type="text" name="itemlinkComic" placeholder="Link Comic">
-		</div>
-		<div class="item-wrap">
-			<div class="item_genreComic">
-				<label for="">Genre Comic</label>
-				<input type="text" name="itemgenreComic" placeholder="Genre Comic">
+			<div class="item_linkComic">
+				<label for="">Link Comic</label>
+				<input type="text" name="itemlinkComic" placeholder="Link Comic">
 			</div>
-			<div class="item_chapComic">
-				<label for="">Chapter Comic</label>
-				<input type="text" name="itemchapComic" placeholder="Chapter Comic">
+			<div class="item-wrap">
+				<div class="item_genreComic">
+					<label for="">Genre Comic</label>
+					<input type="text" name="itemgenreComic" placeholder="Genre Comic">
+				</div>
+				<div class="item_chapComic">
+					<label for="">Chapter Comic</label>
+					<input type="text" name="itemchapComic" placeholder="Chapter Comic">
+				</div>
 			</div>
+			<div class="item-btn">Thêm Truyện</div>
 		</div>
-		<div class="item-btn">Thêm Truyện</div>
 	</div>
 </body>
 <script type="module" src="js/index.js"></script>

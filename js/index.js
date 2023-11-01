@@ -128,3 +128,47 @@ function comicFilter(getValue) {
 		return newArray
 	}
 }
+// Chỉnh sửa chap-----------------------------------------------------------
+const noticeBtns = $$('.notice-btn');
+const boxEdits = $$('.box-edit');
+const extraBtns = $$('.extra-btn');
+const closeBtn = $('.close-btn');
+const boxItem = $('.box-item');
+const genreHeading = $('#genre-head');
+const columnHead = $$('.column-head');
+console.log(genreHeading, columnHead)
+function handleExtraChap() {
+	noticeBtns.forEach((btn, index) => {
+		btn.addEventListener('click', () => {
+			boxEdits[index].classList.toggle('open')
+		})
+	})
+	extraBtns.forEach((btn, index) => {
+		btn.addEventListener('click', () => {
+			boxItem.classList.add('open')
+			btn.classList.add('click');
+			let nameHead = columnHead[index].innerText;
+			genreHeading.innerText = nameHead;
+		})
+		closeBtn.addEventListener('click', () => {
+			boxItem.classList.remove('open')
+			extraBtns[index].classList.remove('click');
+		})
+	})
+
+} handleExtraChap();
+
+// Xác Nhận Xóa Truyện-------------------------------------------------------
+const deleteBtns = $$('.edit-delete');
+const nameComics = $$('.name-comic');
+deleteBtns.forEach((btn, index) => {
+	btn.addEventListener('click', () => {
+		let getName = nameComics[index].innerText;
+		let getValue = confirm('Bạn có muốn xóa Truyện'+' ' + getName +' ' + 'này ra khỏi danh sách không?')
+		if(getValue == 0){
+			console.log('Không Xóa Truyện')
+		} else if(getValue == 1) {
+			console.log('Xác Nhận Xóa Truyện')
+		}
+	})
+})

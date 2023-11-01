@@ -3,22 +3,31 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 12px;
-	margin: 20px auto;
+	margin: 20px 8px;
 }
 .column{
+	position: relative;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	padding: 12px;
 	/* margin: 20px; */
 	background-color: #ddd;
 }
+.extra-btn{
+	position: absolute;
+	top: 20px; right: 20px;
+	font-size: 26px;
+	color: #fff;
+	cursor: pointer;
+}
+.extra-btn.click{color: tomato;}
+.extra-btn:hover{color: tomato}
 .column-head{
 	font-size: 24px;
 	text-transform: uppercase;
 	border-bottom: 4px double tomato;
 	padding-bottom: 12px;
 	margin-bottom: 12px;
-
 }
 .links{
 	max-height: 440px;
@@ -87,7 +96,7 @@
 	display: flex;
 	border: 1px solid #ddd;
 	border-radius: 4px;
-	width: 200px; height: 34px;
+	width: 196px; height: 34px;
 	flex: 1;
 	margin: 10px 0px;
 	text-decoration: none;
@@ -300,10 +309,16 @@
 }
 /* BOX-ITEM------------------------------------------------------------------------------ */
 .box-item{
-	position: relative;
+	position: fixed;
+	top: 0; right: 0; left: 0; bottom: 0;
 	z-index: 10;
+	display: none;
+}
+.box-item.open{display: block;}
+.wrap-infor{
+	position: relative;
 	width: 500px;
-	margin: 200px auto;
+	margin: 100px auto;
 	padding: 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -315,6 +330,9 @@
 	margin-bottom: 20px;
 	color: #fff;
 }
+#genre-head{
+	color: tomato;
+}
 .box-item > div {
 	margin-bottom: 18px;
 	color: #fff;
@@ -323,7 +341,6 @@
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	gap: 4px;
-
 }
 .box-item > div label{
 	margin-left: 12px;
@@ -343,5 +360,21 @@
 	background-color: tomato;
 	cursor: pointer;
 	border-radius: 4px;
+	margin-top: 20px;
 	box-shadow: 1px 2px 3px #fff;	
+}
+.box-edit{
+	display: none;
+	transform: translateY(-122px);
+}
+.box-edit.open{
+	display: block;
+	transform: translateY(0);
+}
+.close-btn{
+	position: absolute;
+	top: 4px; right: 4px;
+	font-size: 26px;
+	padding: 12px 12px 4px 12px;
+	color: tomato;
 }

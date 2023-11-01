@@ -17,6 +17,22 @@
 		position: fixed;
 		top: 10px; left: 0; right: 0;
 	}
+	.infor-href{
+		width: 166px;
+	}
+	.box-item{
+		width: 100%;
+	}
+	.item-wrap{
+		grid-template-columns: 4fr 3fr;
+	}
+	.wrap-infor{
+		width: 100%;
+		margin-top: 60px;
+	}
+	.close-btn{
+		top: -8px; right: -4px
+	}
 	/* comic.html */
 	#background-web{
 		width: 100%;
@@ -52,4 +68,6 @@
 	.web-column{
 		width: 100%;
 	}
+	
+	
 }

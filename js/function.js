@@ -13,34 +13,36 @@ function renderComics(item) {
 				</div>
 			</div>
 			<div class="infor-truyen">
-				<span>${nameComic}</span>
+				<span class="name-comic">${nameComic}</span>
 				<span>Main: <span class="truyen-main">${mainComic}</span>
 				<a  class="infor-href" target="_blank" href=${linkComic} >Đọc Truyện</a>
 			</div>
 		</div>
 		<i class="fa-solid fa-circle-exclamation notice-btn"></i>
-		<div class="wrap-edit">
-			<span class="edit-repair">Áp dụng</span>
-			<span class="edit-delete">Xóa</span>
-		</div>
-		<div class="wrap-input">
-			<div class="input-name">
-				<div>
-					<label>Name Comic:</label>
-					<input type="text" name="nameComic" placeholder="Name Comic">
+		<div class="box-edit">
+			<div class="wrap-edit">
+				<span class="edit-repair">Áp dụng</span>
+				<span class="edit-delete">Xóa</span>
+			</div>
+			<div class="wrap-input">
+				<div class="input-name">
+					<div>
+						<label>Name Comic:</label>
+						<input type="text" name="nameComic" placeholder="Name Comic">
+					</div>
+					<div>
+						<label>Name Character:</label>
+						<input type="text" name="nameCharacter" placeholder="Name Character">
+					</div>
 				</div>
 				<div>
-					<label>Name Character:</label>
-					<input type="text" name="nameCharacter" placeholder="Name Character">
+					<label>Link Comic:</label>
+					<input type="text" name="linkComic" placeholder="Link Comic">
 				</div>
-			</div>
-			<div>
-				<label>Link Comic:</label>
-				<input type="text" name="linkComic" placeholder="Link Comic">
-			</div>
-			<div>
-				<label>Link Image:</label>
-				<input type="text" name="linkImage" placeholder="Link Image">
+				<div>
+					<label>Link Image:</label>
+					<input type="text" name="linkImage" placeholder="Link Image">
+				</div>
 			</div>
 		</div>
 	</div>
