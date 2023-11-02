@@ -165,7 +165,7 @@ const comics = {
 		{
 			id: 24, nameComic: "Ta Bị Nhốt Cùng Một Ngày 1000 Năm", mainComic: "Ngô Thần",
 			imageComic:"https://i.postimg.cc/RZfcfkKB/yy-1.jpg",
-			linkComic: "https://nettruyenco.vn/truyen-tranh/ta-bi-ket-cung-mot-ngay-1000-nam-13957",
+			linkComic: "https://nettruyenus.com/truyen-tranh/ta-bi-ket-cung-mot-ngay-1000-nam-81624",
 			chapComic: 50,
 			genreComic: ["All", "Manhua", "Fantasy", "Webtoon", "Hệ Thống", "Đô Thị"]	
 		},		
