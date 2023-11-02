@@ -150,7 +150,8 @@
 	border-radius: 4px;
 }
 .input-name{
-	display: flex;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
 }
 .wrap-input label{
 	display: block;

@@ -156,12 +156,19 @@
 			"genreComic": ["All", "Manhua", "Comedy", "Action"]	
 		},		
 		{
-			"id": 15, "nameComic": "Vợ Tôi Là Quỷ Vương", "mainComic": "Hạng Dã",
+			"id": 23, "nameComic": "", "mainComic": "Ngô Thần",
 			"imageComic":"https://i.postimg.cc/05h0SRNH/vo-toi-la-quy-vuong.jpg",
 			"linkComic": "https://www.nettruyenus.com/truyen-tranh/vo-toi-la-quy-vuong-215390",
-			"chapComic": 440,
-			"genreComic": ["All", "Manhua", "Fantasy", "Webtoon", "Adventure"]	
-		}		
+			"chapComic": 50,
+			"genreComic": ["All", "Manhua", "Trọng Sinh", "Webtoon", "Hệ Thống", "Đô Thị"]	
+		},	
+		{
+			"id": 23, "nameComic": "", "mainComic": "Ngô Thần",
+			"imageComic":"https://i.postimg.cc/05h0SRNH/vo-toi-la-quy-vuong.jpg",
+			"linkComic": "https://www.nettruyenus.com/truyen-tranh/vo-toi-la-quy-vuong-215390",
+			"chapComic": 50,
+			"genreComic": ["All", "Manhua", "Trọng Sinh", "Webtoon", "Hệ Thống", "Đô Thị"]	
+		}
 	],
 	"manhwa" : [
 		{

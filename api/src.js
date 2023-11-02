@@ -149,18 +149,25 @@ const comics = {
 			genreComic: ["All", "Manhua", "Fantasy", "Action"]	
 		},		
 		{
-			id: 22, nameComic: "Nữ Đồ Đệ Ai Nấy Đều Muốn Giết Ta", mainComic: "Tô Bắc",
+			id: 23, nameComic: "Nữ Đồ Đệ Ai Nấy Đều Muốn Giết Ta", mainComic: "Tô Bắc",
 			imageComic:"https://i.postimg.cc/yxnRWVFp/nu-do-de-ai-nay-deu-muon-giet-ta.jpg",
 			linkComic: "https://www.nettruyenus.com/truyen-tranh/nu-do-de-ai-nay-deu-muon-giet-ta-76589",
 			chapComic: 47,
 			genreComic: ["All", "Manhua", "Comedy", "Action"]	
 		},		
 		{
-			id: 15, nameComic: "Vợ Tôi Là Quỷ Vương", mainComic: "Hạng Dã",
-			imageComic:"https://i.postimg.cc/05h0SRNH/vo-toi-la-quy-vuong.jpg",
-			linkComic: "https://www.nettruyenus.com/truyen-tranh/vo-toi-la-quy-vuong-215390",
-			chapComic: 440,
-			genreComic: ["All", "Manhua", "Fantasy", "Webtoon", "Adventure"]	
+			id: 24, nameComic: "Đại Phản Diện", mainComic: "Ân Vô Đạo",
+			imageComic:"https://i.postimg.cc/J4zrjRLw/trum-phan-dien-1691423188.jpg",
+			linkComic: "https://nettruyenco.vn/truyen-tranh/dai-phan-dien-12518",
+			chapComic: 120,
+			genreComic: ["All", "Manhua", "Fantasy", "Webtoon", "Hệ Thống", "Đô Thị"]	
+		},		
+		{
+			id: 24, nameComic: "Ta Bị Nhốt Cùng Một Ngày 1000 Năm", mainComic: "Ngô Thần",
+			imageComic:"https://i.postimg.cc/RZfcfkKB/yy-1.jpg",
+			linkComic: "https://nettruyenco.vn/truyen-tranh/ta-bi-ket-cung-mot-ngay-1000-nam-13957",
+			chapComic: 50,
+			genreComic: ["All", "Manhua", "Fantasy", "Webtoon", "Hệ Thống", "Đô Thị"]	
 		},		
 	],
 	"manhwa" : [

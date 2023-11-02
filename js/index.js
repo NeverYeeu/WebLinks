@@ -136,7 +136,6 @@ const closeBtn = $('.close-btn');
 const boxItem = $('.box-item');
 const genreHeading = $('#genre-head');
 const columnHead = $$('.column-head');
-console.log(genreHeading, columnHead)
 function handleExtraChap() {
 	noticeBtns.forEach((btn, index) => {
 		btn.addEventListener('click', () => {
@@ -164,7 +163,7 @@ const nameComics = $$('.name-comic');
 deleteBtns.forEach((btn, index) => {
 	btn.addEventListener('click', () => {
 		let getName = nameComics[index].innerText;
-		let getValue = confirm('Bạn có muốn xóa Truyện'+' ' + getName +' ' + 'này ra khỏi danh sách không?')
+		let getValue = confirm('Bạn có muốn xóa Truyện'+' " ' + getName +' " ' + 'này ra khỏi danh sách không?')
 		if(getValue == 0){
 			console.log('Không Xóa Truyện')
 		} else if(getValue == 1) {
@@ -172,3 +171,45 @@ deleteBtns.forEach((btn, index) => {
 		}
 	})
 })
+// Xử lý và render du lieu ra the input---------------------------------------
+// const inputTexts = $$('.wrap-input  input[type="text"]')
+const nameComic = $$('input[name="nameComic"]')
+const nameCharacter = $$('input[name="nameCharacter"]')
+const linkComic = $$('input[name="linkComic"]')
+const linkImage = $$('input[name="linkImage"]')
+const nameGenre = $$('input[name="nameGenre"]')
+const nameChapter = $$('input[name="nameChapter"]')
+let manhuaLength = arrManhua.length;
+let manhwaLength = arrManhwa.length;
+let mangaLength = arrManga.length;
+	handleValueInput(arrManhua, manhuaLength)
+	handleValueInput(arrManhwa, manhwaLength)
+	handleValueInput(arrManga, mangaLength)
+
+function handleValueInput(arr, arrLength){
+	let totalLength = 0;
+	if(arrLength == manhuaLength) {
+		for (let i = 0; i < arrLength; ++i){
+			renderValueInput(i, 0, arr)
+		}
+	} else if(arrLength == manhwaLength){
+		totalLength = manhwaLength + manhuaLength;
+		for (let i = manhuaLength ; i < totalLength; ++i){
+			renderValueInput(i, manhuaLength, arr)
+		}
+	} else if(arrLength == mangaLength) {
+		totalLength = manhuaLength + mangaLength + manhwaLength;
+		let currentLength = manhuaLength + manhwaLength;
+		for (let i = currentLength; i< totalLength; ++i) {
+			renderValueInput(i, currentLength, arr)
+		}
+	}
+};
+function renderValueInput(i, index, arr){
+	nameComic[i].setAttribute('value', arr[i-index].nameComic);
+	nameCharacter[i].setAttribute('value', arr[i-index].mainComic);
+	linkComic[i].setAttribute('value', arr[i-index].linkComic);
+	linkImage[i].setAttribute('value', arr[i-index].imageComic);
+	nameChapter[i].setAttribute('value', arr[i-index].chapComic);
+	nameGenre[i].setAttribute('value', arr[i-index].genreComic);
+}

@@ -31,7 +31,7 @@ function renderComics(item) {
 						<input type="text" name="nameComic" placeholder="Name Comic">
 					</div>
 					<div>
-						<label>Name Character:</label>
+						<label>Character:</label>
 						<input type="text" name="nameCharacter" placeholder="Name Character">
 					</div>
 				</div>
@@ -42,6 +42,16 @@ function renderComics(item) {
 				<div>
 					<label>Link Image:</label>
 					<input type="text" name="linkImage" placeholder="Link Image">
+				</div>
+				<div class="input-name">
+					<div>
+						<label>Genre:</label>
+						<input type="text" name="nameGenre" placeholder="Name Genre">
+					</div>
+					<div>
+						<label>Chapter:</label>
+						<input type="text" name="nameChapter" placeholder="Chapter">
+					</div>
 				</div>
 			</div>
 		</div>
