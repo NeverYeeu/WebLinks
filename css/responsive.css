@@ -33,6 +33,9 @@
 	.close-btn{
 		top: -8px; right: -4px
 	}
+	.notice-btn{
+		position: absolute;
+		top: 50px; right: 4px;}
 	/* comic.html */
 	#background-web{
 		width: 100%;
