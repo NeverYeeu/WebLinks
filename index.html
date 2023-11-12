@@ -12,31 +12,33 @@
 </head>
 <body>
 	<div id="background"></div>
-	<div id="box-links">
-		<div class="column">
-			<div class="column-head">Manhua</div>
-			<div class="links" id="manhua"></div>
-			<i class="fa-solid fa-plus extra-btn"></i>
+	<div class="wrap-box">
+		<div id="box-links">
+			<div class="column">
+				<div class="column-head">Manhua</div>
+				<div class="links" id="manhua"></div>
+				<i class="fa-solid fa-plus extra-btn"></i>
+			</div>
+			<div class="column">
+				<div class="column-head">Manhwa</div>
+				<div class="links" id="manhwa"></div>
+				<i class="fa-solid fa-plus extra-btn"></i>
+			</div>
+			<div class="column">
+				<div class="column-head">Manga</div>
+				<div class="links" id="manga"></div>
+				<i class="fa-solid fa-plus extra-btn"></i>
+			</div>
 		</div>
-		<div class="column">
-			<div class="column-head">Manhwa</div>
-			<div class="links" id="manhwa"></div>
-			<i class="fa-solid fa-plus extra-btn"></i>
+		<div class="box-genre">
+			<div class="box-genre_content">
+				<span>Bạn thích đọc truyện Thể loại gì?</span>
+				<ul class="genre_list"><!--JS--></ul>
+				<a href="https://neveryeeu.github.io/WebMusics/" id="learnE">Web Nghe Nhạc của tôi ^></a>
+				<a href="comicx.html" class="read-x"><i class="fa-solid fa-book-open"></i></a>
+			</div>
+			<div class="box-genre_overlay"></div>
 		</div>
-		<div class="column">
-			<div class="column-head">Manga</div>
-			<div class="links" id="manga"></div>
-			<i class="fa-solid fa-plus extra-btn"></i>
-		</div>
-	</div>
-	<div class="box-genre">
-		<div class="box-genre_content">
-			<span>Bạn thích đọc truyện Thể loại gì?</span>
-			<ul class="genre_list"><!--JS--></ul>
-			<a href="https://neveryeeu.github.io/WebMusics/" id="learnE">Web Nghe Nhạc của tôi ^></a>
-			<a href="comicx.html" class="read-x"><i class="fa-solid fa-book-open"></i></a>
-		</div>
-		<div class="box-genre_overlay"></div>
 	</div>
 	<div id="box-icon">
 		<i class="fa-solid fa-gear load-btn"></i>
@@ -50,7 +52,11 @@
 			</div>
 		</div>
 		<i class="fa-solid fa-bars-staggered genre-btn"></i>
+		<i class="fa-solid fa-book-open-reader read_comic"></i>
+		<i class="fa-solid fa-server server-btn"></i>
+		<i class="fa-solid fa-plus extra_comic"></i> 
 	</div>
+	<!--  -->
 	<div class="box-item">
 		<div class="wrap-infor">
 			<p>Thêm truyện vào - <span id="genre-head"></span></p>
@@ -86,6 +92,10 @@
 			<div class="item-btn">Thêm Truyện</div>
 		</div>
 	</div>
+	<div class="box-links">
+		<div class="links-comic"></div>
+	</div>
+	
 </body>
 <script type="module" src="js/index.js"></script>
 </html>

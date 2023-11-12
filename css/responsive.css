@@ -71,6 +71,14 @@
 	.web-column{
 		width: 100%;
 	}
-	
-	
+	/*  */
+	.box-links{
+		display: block;
+	}
+	.comic_name{
+		width: 92%;
+	}
+	.links-comic{
+		grid-template-columns: 1fr;
+	}
 }
