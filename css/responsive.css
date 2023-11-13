@@ -76,9 +76,24 @@
 		display: block;
 	}
 	.comic_name{
-		width: 92%;
+		width: 88%;
 	}
 	.links-comic{
 		grid-template-columns: 1fr;
+		margin: 8px 0;
+	}
+	.links-head{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		gap: 0;
+		justify-content: center;
+	}
+	.links-head span{
+		font-size: 22px;
+	}
+	
+	.link-comic > p{
+		right: 8px;
 	}
 }

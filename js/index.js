@@ -11,6 +11,7 @@ const boxSettings = $$('.box-setting');
 const chapterNums = $$('.chapter-num');
 const chapterLinks = $$('.chapter-link');
 const setButtons = $$('.setting-button');
+const boxServer = $('.box-server');
 
 // Xử lý render ra trình duyệt
 
@@ -209,105 +210,15 @@ function renderValueInput(i, index, arr){
 	nameGenre[i].setAttribute('value', arr[i-index].genreComic);
 }
 // Gọi API lấy dữ liệu-----------------------------------------------
-const urlApi = 'http://localhost:3000/manhua';
-const button = $('.item-btn');
-const linksComic = $('.links-comic')
-
-function startWeb(){
-	getApi(renderData);
-	handleForm();
-}
-startWeb();
-function renderData(array) {
-	linksComic.innerHTML = array.reverse().map(dataHtml).join('');
-	function dataHtml(item) {
-		let {id, nameComic, mainComic, imageComic, linkComic, chapComic, genreComic} = item;
-		return (`
-		<div class="link-comic item-${id}" >
-			<img src=${imageComic} alt=${nameComic} class="comic_img">
-			<span>
-				<div class="comic_name">${nameComic}</div>
-				<div class="comic_1">
-					<input type="text" placeholder="Chapter" value= ${chapComic}>
-					<input type="text" placeholder="Main" value= ${mainComic}>
-				</div>
-				<input type="text" placeholder="Genre" value= ${genreComic}>
-				<div class="comic_2">
-					<input type="text" placeholder="Link Comic" value= ${linkComic}>
-					<input type="text" placeholder="Link Image" value= ${imageComic}>
-				</div>
-			</span>
-			<p class="delete_comic">Xóa</p>
-		</div>
-		`)
+const linkHeads = $$('.links-head > span');
+linkHeads.forEach((head, index) => {
+	head.onclick = () => {
+		$('.links-head >span.choose-head').classList.remove('choose-head')
+		head.classList.add('choose-head');
+		let valueGenre = head.innerText.toLowerCase();
+		handleApi(valueGenre)
 	}
-	const deleteComicBtns = $$('.delete_comic');
-	deleteComicBtns.forEach((item, index) => {
-	item.addEventListener('click', () => {
-		deleteApi(index)
-	})
-	})
-}
-function getApi(callback) {
-	fetch(urlApi) 
-		.then (res => res.json())
-		.then (callback)		
-		.catch( () => {
-			console.log('Không thể gọi được API')
-		})
-}
-// Đẩy code lên json-server-------------------------------------------------
-function postApi(data, usersApi) {
-	let option = {
-		method: 'POST',
-		headers: {"Content-Type": "application/json"},
-		body: JSON.stringify(data)
-	}
-	fetch(urlApi, option) 
-		.then(res => res.json())
-		.then(usersApi)
-}
-// Xóa dữ liệu--------------------------------------------------------------
-function deleteApi(id){
-	let isChoose = confirm('Bạn có muốn xóa truyện này không?');
-	if(isChoose == true) {
-		console.log('xóa truyện')
-		let option = {
-			method: 'DELETE',
-			headers: {"Content-Type": "application/json"},
-		}
-		fetch(urlApi + '/' + id, option) 
-			.then(res => res.json())
-			.then(() => {
-				let item = $('.item-' + id);
-				item.remove();
-			})
-	} else{
-		console.log('Không xóa truyện')
-	}
-}
-//Xử lý khi ta nhập dữ liệu-------------------------------------------------
-function handleForm(){
-	button.addEventListener('click', () => {
-		let nameComic = $('input[name="itemNameComic"]').value;
-		let mainComic = $('input[name="itemnameCharacter"]').value;
-		let imageComic = $('input[name="itemimageComic"]').value;
-		let linkComic = $('input[name="itemlinkComic"]').value;
-		let chapComic = $('input[name="itemchapComic"]').value;
-		let genreComic = $('input[name="itemgenreComic"]').value;
-		var formData = {
-			nameComic: nameComic,
-			mainComic: mainComic,
-			imageComic: imageComic,
-			linkComic: linkComic,
-			chapComic: chapComic,
-			genreComic: genreComic
-		}
-		postApi(formData, () => {
-			getApi(renderData);
-		})
-	})
-}
+})
 // Dong mo hop truyen tranh-------------------------------------------------
 const extraComic = $('.extra_comic');
 const serverBtn = $('.server-btn');
@@ -321,10 +232,11 @@ serverBtn.addEventListener('click', () => {
 	genreBtn.classList.add('close')
 	readBtn.classList.add('open')
 	extraComic.classList.add('open')
-    boxLinkApi.classList.add('open');
+	boxLinkApi.classList.add('open');
 });
 readBtn.addEventListener('click', () => {
 	wrapBox.classList.remove('close')
+	boxLinkApi.classList.remove('open')
 	readBtn.classList.remove('open');
 	genreBtn.classList.remove('close')
 	extraComic.classList.remove('open')
@@ -336,3 +248,115 @@ extraComic.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
 	boxItem.classList.remove('open')
 })
+handleApi('manhua')
+// Lấy giữ liệu truyền vào api----------------------------------------
+function handleApi(genre) {
+	const urlApi = 'http://localhost:3000/' + genre;
+	const button = $('.item-btn');
+	const linksComic = $('.links-comic')
+	
+	function startWeb(){
+		getApi(renderData);
+		handleForm();
+	}
+	startWeb();
+	function renderData(array) {
+		linksComic.innerHTML = array.reverse().map(dataHtml).join('');
+		function dataHtml(item) {
+			let {id, nameComic, mainComic, imageComic, linkComic, chapComic, genreComic} = item;
+			return (`
+			<div class="link-comic item-${id}" >
+				<img src=${imageComic} alt=${nameComic} class="comic_img">
+				<span>
+					<div class="comic_name">${nameComic}</div>
+					<div class="comic_1">
+						<input type="text" placeholder="Chapter" value= ${chapComic}>
+						<input type="text" placeholder="Main" value= ${mainComic}>
+					</div>
+					<input type="text" placeholder="Genre" value= ${genreComic}>
+					<div class="comic_2">
+						<input type="text" placeholder="Link Comic" value= ${linkComic}>
+						<input type="text" placeholder="Link Image" value= ${imageComic}>
+					</div>
+				</span>
+				<p class="delete_comic">Xóa</p>
+			</div>
+			`)
+		}
+		const deleteComicBtns = $$('.delete_comic');
+		deleteComicBtns.forEach((item, index) => {
+		item.addEventListener('click', () => {
+			deleteApi(index)
+		})
+		})
+	}
+	function getApi(callback) {
+		fetch(urlApi) 
+			.then (res => res.json())
+			.then (callback)		
+			.catch( () => {
+				console.log('Không thể gọi được API');
+				boxLinkApi.innerHTML = (`
+				<div class="box-server">
+					<div class="server-notice">
+						Server hiện chưa được bật, vui lòng bật lên '__'
+					</div>
+				</div>
+				`)
+				
+			})
+	}
+	// Đẩy code lên json-server-------------------------------------------------
+	function postApi(data, usersApi) {
+		let option = {
+			method: 'POST',
+			headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(data)
+		}
+		fetch(urlApi, option) 
+			.then(res => res.json())
+			.then(usersApi)
+	}
+	// Xóa dữ liệu--------------------------------------------------------------
+	function deleteApi(id){
+		let isChoose = confirm('Bạn có muốn xóa truyện này không?');
+		if(isChoose == true) {
+			console.log('xóa truyện')
+			let option = {
+				method: 'DELETE',
+				headers: {"Content-Type": "application/json"},
+			}
+			fetch(urlApi + '/' + id, option) 
+				.then(res => res.json())
+				.then(() => {
+					let item = $('.item-' + id);
+					item.remove();
+				})
+		} else{
+			console.log('Không xóa truyện')
+		}
+	}
+	//Xử lý khi ta nhập dữ liệu-------------------------------------------------
+	function handleForm(){
+		button.addEventListener('click', () => {
+			let nameComic = $('input[name="itemNameComic"]').value;
+			let mainComic = $('input[name="itemnameCharacter"]').value;
+			let imageComic = $('input[name="itemimageComic"]').value;
+			let linkComic = $('input[name="itemlinkComic"]').value;
+			let chapComic = $('input[name="itemchapComic"]').value;
+			let genreComic = $('input[name="itemgenreComic"]').value;
+			var formData = {
+				nameComic: nameComic,
+				mainComic: mainComic,
+				imageComic: imageComic,
+				linkComic: linkComic,
+				chapComic: chapComic,
+				genreComic: genreComic
+			}
+			postApi(formData, () => {
+				getApi(renderData);
+			})
+		})
+	}
+}
+
