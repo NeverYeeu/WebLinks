@@ -12,6 +12,7 @@ const chapterNums = $$('.chapter-num');
 const chapterLinks = $$('.chapter-link');
 const setButtons = $$('.setting-button');
 const boxServer = $('.box-server');
+const linksComic = $('.links-comic')
 
 // Xử lý render ra trình duyệt
 
@@ -220,6 +221,7 @@ linkHeads.forEach((head, index) => {
 	}
 })
 // Dong mo hop truyen tranh-------------------------------------------------
+const setBtn = $('.load-btn');
 const extraComic = $('.extra_comic');
 const serverBtn = $('.server-btn');
 const readBtn = $('.read_comic')
@@ -228,18 +230,23 @@ const boxLinkApi = $('.box-links');
 const wrapBox = $('.wrap-box');
 
 serverBtn.addEventListener('click', () => {
-	wrapBox.classList.add('close')
-	genreBtn.classList.add('close')
-	readBtn.classList.add('open')
-	extraComic.classList.add('open')
-	boxLinkApi.classList.add('open');
+	wrapBox.classList.remove('open')
+	readBtn.classList.remove('close')
+
+	genreBtn.classList.remove('open')
+	extraComic.classList.remove('close')
+	boxLinkApi.classList.remove('close');
+	serverBtn.classList.remove('open')
 });
 readBtn.addEventListener('click', () => {
-	wrapBox.classList.remove('close')
-	boxLinkApi.classList.remove('open')
-	readBtn.classList.remove('open');
-	genreBtn.classList.remove('close')
-	extraComic.classList.remove('open')
+	wrapBox.classList.add('open')
+	boxLinkApi.classList.add('close')
+	serverBtn.classList.add('open')
+	setBtn.classList.add('open')
+
+	readBtn.classList.add('close');
+	genreBtn.classList.add('open')
+	extraComic.classList.add('close')
 })
 
 extraComic.addEventListener('click', () => {
@@ -248,48 +255,22 @@ extraComic.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
 	boxItem.classList.remove('open')
 })
-handleApi('manhua')
+
+let manhua = (comics.manhua).sort((a,b) => {
+	return (b.chapComic - a.chapComic)
+})
+renderData(manhua)
 // Lấy giữ liệu truyền vào api----------------------------------------
 function handleApi(genre) {
 	const urlApi = 'http://localhost:3000/' + genre;
 	const button = $('.item-btn');
-	const linksComic = $('.links-comic')
 	
 	function startWeb(){
 		getApi(renderData);
 		handleForm();
 	}
 	startWeb();
-	function renderData(array) {
-		linksComic.innerHTML = array.reverse().map(dataHtml).join('');
-		function dataHtml(item) {
-			let {id, nameComic, mainComic, imageComic, linkComic, chapComic, genreComic} = item;
-			return (`
-			<div class="link-comic item-${id}" >
-				<img src=${imageComic} alt=${nameComic} class="comic_img">
-				<span>
-					<div class="comic_name">${nameComic}</div>
-					<div class="comic_1">
-						<input type="text" placeholder="Chapter" value= ${chapComic}>
-						<input type="text" placeholder="Main" value= ${mainComic}>
-					</div>
-					<input type="text" placeholder="Genre" value= ${genreComic}>
-					<div class="comic_2">
-						<input type="text" placeholder="Link Comic" value= ${linkComic}>
-						<input type="text" placeholder="Link Image" value= ${imageComic}>
-					</div>
-				</span>
-				<p class="delete_comic">Xóa</p>
-			</div>
-			`)
-		}
-		const deleteComicBtns = $$('.delete_comic');
-		deleteComicBtns.forEach((item, index) => {
-		item.addEventListener('click', () => {
-			deleteApi(index)
-		})
-		})
-	}
+	
 	function getApi(callback) {
 		fetch(urlApi) 
 			.then (res => res.json())
@@ -360,3 +341,33 @@ function handleApi(genre) {
 	}
 }
 
+function renderData(array) {
+	linksComic.innerHTML = array.map(dataHtml).join('');
+	function dataHtml(item) {
+		let {id, nameComic, mainComic, imageComic, linkComic, chapComic, genreComic} = item;
+		return (`
+		<div class="link-comic item-${id}" >
+			<img src=${imageComic} alt=${nameComic} class="comic_img">
+			<span>
+				<div class="comic_name">${nameComic}</div>
+				<div class="comic_1">
+					<input type="text" placeholder="Chapter" value= ${chapComic}>
+					<input type="text" placeholder="Main" value= ${mainComic}>
+				</div>
+				<input type="text" placeholder="Genre" value= ${genreComic}>
+				<div class="comic_2">
+					<input type="text" placeholder="Link Comic" value= ${linkComic}>
+					<input type="text" placeholder="Link Image" value= ${imageComic}>
+				</div>
+			</span>
+			<p class="delete_comic">Xóa</p>
+		</div>
+		`)
+	}
+	const deleteComicBtns = $$('.delete_comic');
+	deleteComicBtns.forEach((item, index) => {
+	item.addEventListener('click', () => {
+		deleteApi(index)
+	})
+	})
+}

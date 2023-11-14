@@ -1,4 +1,4 @@
-.wrap-box.close{
+.wrap-box{
 	display: none;
 }
 #box-links{
@@ -388,9 +388,9 @@
 	background-color: #222222;
 	border-radius: 12px;
 	padding: 12px;
-	display: none;
+	/* display: none; */
 }
-.box-links.open{display: block;}
+.box-links.close{display: none;}
 .links-head{
 	display: flex;
 	gap: 20px;
@@ -469,10 +469,12 @@
 .comic_1{grid-template-columns: 1fr 5fr}
 .comic_2{grid-template-columns: 1fr 1fr}
 
-.extra_comic{display: none;}
-.read_comic{display: none;}
-
-
+.extra_comic{display: block;}
+.extra_comic.close{display: none;}
+.read_comic{display: block;}
+.read_comic.close{display: none;}
+.server-btn{display: none}
+.genre-btn{display: none}
 
 .box-server{
 	position: fixed;
@@ -487,6 +489,7 @@
 	text-align: center;
 	text-shadow: 1px 2px 6px #fff;
 }
+.delete_comic{color: #fff};
 
 .close{display: none;}
 .open{display: block}

@@ -278,6 +278,15 @@
       "chapComic": "3600",
       "genreComic": "Harem, Xuyên Không ",
       "id": 23
+    },
+    {
+      "nameComic": "Truyen Tranh",
+      "mainComic": "XasDuong",
+      "imageComic": "anh.jpg",
+      "linkComic": "anh",
+      "chapComic": "100",
+      "genreComic": "Phieu luu",
+      "id": 24
     }
   ],
   "manhwa": [
@@ -522,6 +531,15 @@
         "Shounen",
         "Comedy"
       ]
+    },
+    {
+      "nameComic": "Fairy Tail",
+      "mainComic": "Natsu",
+      "imageComic": "https://i.postimg.cc/ZnmcDyDb/hoi-phap-su-noi-tieng.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/hoi-phap-su-noi-tieng-91701",
+      "chapComic": "545",
+      "genreComic": "Comedy, Drama, Adventure, Supernatural",
+      "id": 9
     }
   ]
 }
