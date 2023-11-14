@@ -339,6 +339,13 @@ function handleApi(genre) {
 			})
 		})
 	}
+	const deleteComicBtns = $$('.delete_comic');
+	console.log(deleteComicBtns)
+	deleteComicBtns.forEach((item, index) => {
+		item.addEventListener('click', () => {
+			deleteApi(index)
+		})
+	})
 }
 
 function renderData(array) {
@@ -364,10 +371,5 @@ function renderData(array) {
 		</div>
 		`)
 	}
-	const deleteComicBtns = $$('.delete_comic');
-	deleteComicBtns.forEach((item, index) => {
-	item.addEventListener('click', () => {
-		deleteApi(index)
-	})
-	})
+	
 }

@@ -1,7 +1,7 @@
 {
   "manhua": [
     {
-      "id": 3,
+      "id": 1,
       "nameComic": "Toàn Chức Pháp Sư",
       "mainComic": "Mạc Phàm",
       "imageComic": "https://i.postimg.cc/nh19TR8q/toan-chuc-phap-su-1518956513.jpg",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 2,
       "nameComic": "Ma Thú Siêu Thần",
       "mainComic": "",
       "imageComic": "https://i.postimg.cc/g24r3xRD/ma-thu-sieu-than-1664880426.jpg",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 3,
       "nameComic": "Tinh Giáp Hồn Tướng",
       "mainComic": "Tống Vân Tường",
       "imageComic": "https://i.postimg.cc/G362jP6q/tinh-giap-hon-tuong-9306.jpg",
@@ -41,6 +41,71 @@
         "Shounen",
         "Mecha",
         "Robot"
+      ]
+    },
+    {
+      "id": 4,
+      "nameComic": "Tôi Chuyển Vàng Tại Mạt Thế",
+      "mainComic": "Vương Bân",
+      "imageComic": "https://i.postimg.cc/tCXTmN9b/toi-chuyen-vang-tai-mat-the-1593774220.jpg",
+      "linkComic": "https://truyenqqvn.com/truyen-tranh/toi-chuyen-vang-tai-mat-the-9988",
+      "chapComic": 418,
+      "genreComic": [
+        "All",
+        "Manhua",
+        "Mạt Thế",
+        "Hệ Thống"
+      ]
+    },
+    {
+      "id": 5,
+      "nameComic": "Nghịch Thiên Cải Mệnh",
+      "mainComic": "Trương Lãng",
+      "imageComic": "https://i.postimg.cc/3Nj7YNQV/nghich-thien-cai-menh.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/nghich-thien-cai-menh-63387",
+      "chapComic": 62,
+      "genreComic": [
+        "All",
+        "Manhua",
+        "Fantasy",
+        "Action"
+      ]
+    },
+    {
+      "id": 6,
+      "nameComic": "Nữ Đồ Đệ Ai Nấy Đều Muốn Giết Ta",
+      "mainComic": "Tô Bắc",
+      "imageComic": "https://i.postimg.cc/yxnRWVFp/nu-do-de-ai-nay-deu-muon-giet-ta.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/nu-do-de-ai-nay-deu-muon-giet-ta-76589",
+      "chapComic": 47,
+      "genreComic": [
+        "All",
+        "Manhua",
+        "Comedy",
+        "Action"
+      ]
+    },
+    {
+      "nameComic": "Võ Luyện Đỉnh Phong",
+      "mainComic": "Dương Khai",
+      "imageComic": "https://i.postimg.cc/pdqKwXmd/vo-luyen-dinh-phong.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/vo-luyen-dinh-phong-176960",
+      "chapComic": "3600",
+      "genreComic": "Harem, Xuyên Không ",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "nameComic": "Cao Đẳng Linh Hồn",
+      "mainComic": "Tưởng Thừa Phong",
+      "imageComic": "https://i.postimg.cc/MT62hF2w/cao-dang-linh-hon.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/cao-dang-linh-hon-217240",
+      "chapComic": 203,
+      "genreComic": [
+        "All",
+        "Manhua",
+        "Fantasy",
+        "Truyện Màu"
       ]
     },
     {
@@ -213,81 +278,8 @@
         "Chuyển Sinh",
         "Truyện Màu"
       ]
-    },
-    {
-      "id": 20,
-      "nameComic": "Cao Đẳng Linh Hồn",
-      "mainComic": "Tưởng Thừa Phong",
-      "imageComic": "https://i.postimg.cc/MT62hF2w/cao-dang-linh-hon.jpg",
-      "linkComic": "https://www.nettruyenus.com/truyen-tranh/cao-dang-linh-hon-217240",
-      "chapComic": 203,
-      "genreComic": [
-        "All",
-        "Manhua",
-        "Fantasy",
-        "Truyện Màu"
-      ]
-    },
-    {
-      "id": 21,
-      "nameComic": "Tôi Chuyển Vàng Tại Mạt Thế",
-      "mainComic": "Vương Bân",
-      "imageComic": "https://i.postimg.cc/tCXTmN9b/toi-chuyen-vang-tai-mat-the-1593774220.jpg",
-      "linkComic": "https://truyenqqvn.com/truyen-tranh/toi-chuyen-vang-tai-mat-the-9988",
-      "chapComic": 418,
-      "genreComic": [
-        "All",
-        "Manhua",
-        "Mạt Thế",
-        "Hệ Thống"
-      ]
-    },
-    {
-      "id": 22,
-      "nameComic": "Nghịch Thiên Cải Mệnh",
-      "mainComic": "Trương Lãng",
-      "imageComic": "https://i.postimg.cc/3Nj7YNQV/nghich-thien-cai-menh.jpg",
-      "linkComic": "https://www.nettruyenus.com/truyen-tranh/nghich-thien-cai-menh-63387",
-      "chapComic": 62,
-      "genreComic": [
-        "All",
-        "Manhua",
-        "Fantasy",
-        "Action"
-      ]
-    },
-    {
-      "id": 22,
-      "nameComic": "Nữ Đồ Đệ Ai Nấy Đều Muốn Giết Ta",
-      "mainComic": "Tô Bắc",
-      "imageComic": "https://i.postimg.cc/yxnRWVFp/nu-do-de-ai-nay-deu-muon-giet-ta.jpg",
-      "linkComic": "https://www.nettruyenus.com/truyen-tranh/nu-do-de-ai-nay-deu-muon-giet-ta-76589",
-      "chapComic": 47,
-      "genreComic": [
-        "All",
-        "Manhua",
-        "Comedy",
-        "Action"
-      ]
-    },
-    {
-      "nameComic": "Võ Luyện Đỉnh Phong",
-      "mainComic": "Dương Khai",
-      "imageComic": "https://i.postimg.cc/pdqKwXmd/vo-luyen-dinh-phong.jpg",
-      "linkComic": "https://www.nettruyenus.com/truyen-tranh/vo-luyen-dinh-phong-176960",
-      "chapComic": "3600",
-      "genreComic": "Harem, Xuyên Không ",
-      "id": 23
-    },
-    {
-      "nameComic": "Truyen Tranh",
-      "mainComic": "XasDuong",
-      "imageComic": "anh.jpg",
-      "linkComic": "anh",
-      "chapComic": "100",
-      "genreComic": "Phieu luu",
-      "id": 24
     }
+    
   ],
   "manhwa": [
     {
