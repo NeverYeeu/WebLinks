@@ -1,8 +1,8 @@
-import {comics} from '../api/src.js'
 function renderComics(item) {
 	let {nameComic, mainComic, imageComic, linkComic, chapComic} = item;
 	return (`
 	<div class="link-infor">
+		<img src=${imageComic} alt="" class="infor-img">
 		<div class="wrapper-infor">
 			<div class="infor-chap">
 				<img src=${imageComic} alt="">

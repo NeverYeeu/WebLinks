@@ -229,24 +229,24 @@ const genreBtn = $('.genre-btn');
 const boxLinkApi = $('.box-links');
 const wrapBox = $('.wrap-box');
 
-serverBtn.addEventListener('click', () => {
-	wrapBox.classList.remove('open')
-	readBtn.classList.remove('close')
-
-	genreBtn.classList.remove('open')
-	extraComic.classList.remove('close')
-	boxLinkApi.classList.remove('close');
-	serverBtn.classList.remove('open')
-});
 readBtn.addEventListener('click', () => {
-	wrapBox.classList.add('open')
-	boxLinkApi.classList.add('close')
-	serverBtn.classList.add('open')
-	setBtn.classList.add('open')
+	wrapBox.classList.remove('close')
+	readBtn.classList.remove('open')
 
-	readBtn.classList.add('close');
-	genreBtn.classList.add('open')
-	extraComic.classList.add('close')
+	genreBtn.classList.remove('close')
+	extraComic.classList.remove('open')
+	boxLinkApi.classList.remove('open');
+	setBtn.classList.remove('close')
+	serverBtn.classList.remove('close')
+});
+serverBtn.addEventListener('click', () => {
+	wrapBox.classList.add('close')
+	boxLinkApi.classList.add('open')
+	serverBtn.classList.add('close')
+	setBtn.classList.add('close')
+	readBtn.classList.add('open');
+	genreBtn.classList.add('close')
+	extraComic.classList.add('open')
 })
 
 extraComic.addEventListener('click', () => {

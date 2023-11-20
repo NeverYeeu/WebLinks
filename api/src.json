@@ -325,15 +325,6 @@
       "id": 24
     },
     {
-      "nameComic": "Thợ Săn Tự Sát Cấp SSS",
-      "mainComic": "Kim Gong Ja",
-      "imageComic": "https://i.postimg.cc/nLbR8X3V/tho-san-tu-sat-cap-sss.jpg",
-      "linkComic": "https://www.nettruyenus.com/truyen-tranh/dai-vuong-tha-mang-264990",
-      "chapComic": 101,
-      "genreComic": ["All","Action","Manhua","Comedy","Xuyên Không"],
-      "id": 25
-    },
-    {
       "nameComic": "Ta Có 90 Tỷ Tiền Liếm Cẩu",
       "mainComic": "Trần Viễn",
       "imageComic": "https://i.postimg.cc/vBB3fkhk/ta-co-90-ty-tien-liem-cau.jpg",
@@ -505,6 +496,15 @@
       "chapComic": 76,
       "genreComic": ["All","Action","Manhwa","Martial Arts","Xuyên Không","Adventure"],
       "id": 12
+    },
+    {
+      "nameComic": "Thợ Săn Tự Sát Cấp SSS",
+      "mainComic": "Kim Gong Ja",
+      "imageComic": "https://i.postimg.cc/nLbR8X3V/tho-san-tu-sat-cap-sss.jpg",
+      "linkComic": "https://www.nettruyenus.com/truyen-tranh/dai-vuong-tha-mang-264990",
+      "chapComic": 101,
+      "genreComic": ["All","Action","Manhua","Comedy","Xuyên Không"],
+      "id": 13
     }
   ],
   "manga": [
