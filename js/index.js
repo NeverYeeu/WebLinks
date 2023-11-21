@@ -235,13 +235,13 @@ readBtn.addEventListener('click', () => {
 
 	genreBtn.classList.remove('close')
 	extraComic.classList.remove('open')
-	boxLinkApi.classList.remove('open');
+	boxLinkApi.classList.add('close');
 	setBtn.classList.remove('close')
 	serverBtn.classList.remove('close')
 });
 serverBtn.addEventListener('click', () => {
 	wrapBox.classList.add('close')
-	boxLinkApi.classList.add('open')
+	boxLinkApi.classList.remove('close')
 	serverBtn.classList.add('close')
 	setBtn.classList.add('close')
 	readBtn.classList.add('open');

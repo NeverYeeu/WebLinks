@@ -326,15 +326,6 @@ let comicsJson =
 		"id": 24
 	  },
 	  {
-		"nameComic": "Thợ Săn Tự Sát Cấp SSS",
-		"mainComic": "Kim Gong Ja",
-		"imageComic": "https://i.postimg.cc/nLbR8X3V/tho-san-tu-sat-cap-sss.jpg",
-		"linkComic": "https://www.nettruyenus.com/truyen-tranh/dai-vuong-tha-mang-264990",
-		"chapComic": 101,
-		"genreComic": ["All","Action","Manhua","Comedy","Xuyên Không"],
-		"id": 25
-	  },
-	  {
 		"nameComic": "Ta Có 90 Tỷ Tiền Liếm Cẩu",
 		"mainComic": "Trần Viễn",
 		"imageComic": "https://i.postimg.cc/vBB3fkhk/ta-co-90-ty-tien-liem-cau.jpg",
@@ -493,7 +484,7 @@ let comicsJson =
 		"nameComic": "Thế Giới Hậu Tận Thế",
 		"mainComic": "JaehWan",
 		"imageComic": "https://i.postimg.cc/vHg027Gx/dai-vuong-tha-mang-7670.jpg",
-		"linkComic": "https://www.nettruyenus.com/truyen-tranh/dai-vuong-tha-mang-264990",
+		"linkComic": "https://www.nettruyenus.com/truyen-tranh/the-gioi-hau-tan-the-580597",
 		"chapComic": 99,
 		"genreComic": ["All","Action","Manhwa","Comedy","Xuyên Không"],
 		"id": 11
@@ -506,6 +497,15 @@ let comicsJson =
 		"chapComic": 76,
 		"genreComic": ["All","Action","Manhwa","Martial Arts","Xuyên Không","Adventure"],
 		"id": 12
+	  },
+	  {
+		"nameComic": "Thợ Săn Tự Sát Cấp SSS",
+		"mainComic": "Kim Gong Ja",
+		"imageComic": "https://i.postimg.cc/nLbR8X3V/tho-san-tu-sat-cap-sss.jpg",
+		"linkComic": "https://www.nettruyenus.com/truyen-tranh/tho-san-tu-sat-cap-sss-365260",
+		"chapComic": 101,
+		"genreComic": ["All","Action","Manhua","Comedy","Xuyên Không"],
+		"id": 13
 	  }
 	],
 	"manga": [

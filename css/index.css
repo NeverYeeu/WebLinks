@@ -1,4 +1,12 @@
-body{color: #000;}
+body{color: #000;
+	position: relative;
+}
+#background img{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%; height: auto;
+	opacity: 0.4;
+}
 .wrap-box.close{
 	display: none;
 }
@@ -13,7 +21,7 @@ body{color: #000;}
 }
 .column{
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid #3a3a3a;
 	border-radius: 4px;
 	padding: 12px;
 	/* margin: 20px; */
@@ -113,7 +121,7 @@ body{color: #000;}
 }
 .infor-href{
 	display: flex;
-	border: 1px solid #ddd;
+	/* border: 1px solid #333232; */
 	border-radius: 4px;
 	width: 196px; height: 34px;
 	flex: 1;
@@ -496,7 +504,7 @@ body{color: #000;}
 /* .extra_comic.close{display: none;} */
 .read_comic{display: none;}
 /* .read_comic.close{display: none;} */
-.server-btn{display: block}
+.server-btn.close{display: none}
 .genre-btn{display: block}
 .genre-btn.close{display: none}
 .load-btn.close{display: none;}
