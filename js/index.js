@@ -73,7 +73,6 @@ function handleChapter(b, index) {
 	idenComic[index].innerText = b
 	localStorage.setItem(index, b)
 }
-
 for(let index in idenComic ){
 	if (index < idenComic){
 		idenComic[index].innerText = localStorage.getItem(index)
@@ -129,16 +128,27 @@ function comicFilter(getValue) {
 }
 // Chỉnh sửa chap-----------------------------------------------------------
 const noticeBtns = $$('.notice-btn');
-const boxEdits = $$('.box-edit');
+const boxEdits = $('.box-infor_comic');
 const extraBtns = $$('.extra-btn');
 const closeBtn = $('.close-btn');
 const boxItem = $('.box-item');
 const genreHeading = $('#genre-head');
 const columnHead = $$('.column-head');
+// Thể hien thong tin truyen tranh----------------------------------------------
 function handleExtraChap() {
 	noticeBtns.forEach((btn, index) => {
 		btn.addEventListener('click', () => {
-			boxEdits[index].classList.toggle('open')
+
+			console.log(index)
+			boxEdits.classList.toggle('open');
+			let boxInfor = $('.box-infor_comic');
+			boxInfor.innerHTML = renderInforComic();
+			const closeWrapBtn = $('.wrap-close');
+			// Xử lý khi ta click vào truyen
+			handleInforComic(index)
+			closeWrapBtn.addEventListener('click', () => {
+				boxEdits.classList.remove('open');
+			})
 		})
 	})
 	extraBtns.forEach((btn, index) => {
@@ -151,65 +161,130 @@ function handleExtraChap() {
 			extraBtns[index].classList.remove('click');
 		})
 	})
+	
 
 } handleExtraChap();
 
 // Xác Nhận Xóa Truyện-------------------------------------------------------
-const deleteBtns = $$('.edit-delete');
-const nameComics = $$('.name-comic');
-deleteBtns.forEach((btn, index) => {
-	btn.addEventListener('click', () => {
-		let getName = nameComics[index].innerText;
-		let getValue = confirm('Bạn có muốn xóa Truyện'+' " ' + getName +' " ' + 'này ra khỏi danh sách không?')
-		if(getValue == 0){
-			console.log('Không Xóa Truyện')
-		} else if(getValue == 1) {
-			console.log('Xác Nhận Xóa Truyện')
-		}
+function hanldeButton() {
+	const deleteBtns = $('.edit-delete');
+	const nameComics = $('.name-comic');
+	deleteBtns.forEach((btn, index) => {
+		btn.addEventListener('click', () => {
+			let getName = nameComics[index].innerText;
+			let getValue = confirm('Bạn có muốn xóa Truyện'+' " ' + getName +' " ' + 'này ra khỏi danh sách không?')
+			if(getValue == 0){
+				console.log('Không Xóa Truyện')
+			} else if(getValue == 1) {
+				console.log('Xác Nhận Xóa Truyện')
+			}
+		})
 	})
-})
+};
+
+function renderInforComic() {
+	return (`
+	<div class="box-edit">
+		<div class="wrap-edit">
+			<span class="edit-repair">Áp dụng</span>
+			<span class="edit-delete">Xóa</span>
+		</div>
+		<div class="wrap-input">
+			<div class="input-name">
+				<div>
+					<label>Name Comic:</label>
+					<input type="text" name="nameComic" placeholder="Name Comic">
+				</div>
+				<div>
+					<label>Character:</label>
+					<input type="text" name="nameCharacter" placeholder="Name Character">
+				</div>
+			</div>
+			<div>
+				<label>Link Comic:</label>
+				<input type="text" name="linkComic" placeholder="Link Comic">
+			</div>
+			<div>
+				<label>Link Image:</label>
+				<input type="text" name="linkImage" placeholder="Link Image">
+			</div>
+			<div class="input-name">
+				<div>
+					<label>Genre:</label>
+					<input type="text" name="nameGenre" placeholder="Name Genre">
+				</div>
+				<div>
+					<label>Chapter:</label>
+					<input type="text" name="nameChapter" placeholder="Chapter">
+				</div>
+			</div> 
+		</div>
+		<div class="wrap-close">Đóng</div>
+	</div>
+	<img src="" class="infor_comicImg" alt=""> 
+	`)
+}
+
 // Xử lý và render du lieu ra the input---------------------------------------
 // const inputTexts = $$('.wrap-input  input[type="text"]')
-const nameComic = $$('input[name="nameComic"]')
-const nameCharacter = $$('input[name="nameCharacter"]')
-const linkComic = $$('input[name="linkComic"]')
-const linkImage = $$('input[name="linkImage"]')
-const nameGenre = $$('input[name="nameGenre"]')
-const nameChapter = $$('input[name="nameChapter"]')
-let manhuaLength = arrManhua.length;
-let manhwaLength = arrManhwa.length;
-let mangaLength = arrManga.length;
-	handleValueInput(arrManhua, manhuaLength)
-	handleValueInput(arrManhwa, manhwaLength)
-	handleValueInput(arrManga, mangaLength)
+function handleInforComic(index){
+	const nameComic = $('input[name="nameComic"]')
+	const nameCharacter = $('input[name="nameCharacter"]')
+	const linkComic = $('input[name="linkComic"]')
+	const linkImage = $('input[name="linkImage"]')
+	const nameGenre = $('input[name="nameGenre"]')
+	const nameChapter = $('input[name="nameChapter"]')
+	let srcImage = $('.infor_comicImg');
+	console.log(srcImage)
+	let manhuaLength = arrManhua.length;
+	let manhwaLength = arrManhwa.length;
+	let mangaLength = arrManga.length;
 
-function handleValueInput(arr, arrLength){
-	let totalLength = 0;
-	if(arrLength == manhuaLength) {
-		for (let i = 0; i < arrLength; ++i){
-			renderValueInput(i, 0, arr)
-		}
-	} else if(arrLength == manhwaLength){
-		totalLength = manhwaLength + manhuaLength;
-		for (let i = manhuaLength ; i < totalLength; ++i){
-			renderValueInput(i, manhuaLength, arr)
-		}
-	} else if(arrLength == mangaLength) {
-		totalLength = manhuaLength + mangaLength + manhwaLength;
-		let currentLength = manhuaLength + manhwaLength;
-		for (let i = currentLength; i< totalLength; ++i) {
-			renderValueInput(i, currentLength, arr)
-		}
+	let indexManhua = manhuaLength;
+	let indexManhwa = manhwaLength + manhuaLength;
+	let indexManga = mangaLength + manhwaLength + manhuaLength;
+	if (index < indexManhua && index >= 0){
+		let length = 0;
+		renderValueInput(index, length, arrManhua)
+	} else if(index > indexManhua && index < indexManhwa){
+		let length = indexManhua;
+		console.log('Manhwa');
+		renderValueInput(index, length, arrManhwa)
+	} else if(index >= indexManhwa && index < indexManga ){
+		console.log('Manhga');
+		let length = indexManhwa;
+		renderValueInput(index, length, arrManga)
 	}
-};
-function renderValueInput(i, index, arr){
-	nameComic[i].setAttribute('value', arr[i-index].nameComic);
-	nameCharacter[i].setAttribute('value', arr[i-index].mainComic);
-	linkComic[i].setAttribute('value', arr[i-index].linkComic);
-	linkImage[i].setAttribute('value', arr[i-index].imageComic);
-	nameChapter[i].setAttribute('value', arr[i-index].chapComic);
-	nameGenre[i].setAttribute('value', arr[i-index].genreComic);
+	
+	// function handleValueInput(arr, index){
+	// 	if(arrLength == manhuaLength) {
+	// 		for (let i = 0; i < arrLength; ++i){
+	// 		}
+	// 	} else if(arrLength == manhwaLength){
+	// 		totalLength = manhwaLength + manhuaLength;
+	// 		for (let i = manhuaLength ; i < totalLength; ++i){
+	// 			renderValueInput(i, manhuaLength, arr)
+	// 		}
+	// 	} else if(arrLength == mangaLength) {
+	// 		totalLength = manhuaLength + mangaLength + manhwaLength;
+	// 		let currentLength = manhuaLength + manhwaLength;
+	// 		for (let i = currentLength; i< totalLength; ++i) {
+	// 			renderValueInput(i, currentLength, arr)
+	// 		}
+	// 	}
+	// };
+	function renderValueInput( index,length, arr){
+		nameComic.setAttribute('value', arr[index-length].nameComic);
+		nameCharacter.setAttribute('value', arr[index-length].mainComic);
+		linkComic.setAttribute('value', arr[index-length].linkComic);
+		linkImage.setAttribute('value', arr[index-length].imageComic);
+		nameChapter.setAttribute('value', arr[index-length].chapComic);
+		nameGenre.setAttribute('value', arr[index-length].genreComic);
+		srcImage.setAttribute('src', arr[index-length].imageComic);
+		console.log(srcImage)
+	}
 }
+// ------------------------------------------------------------------
 // Gọi API lấy dữ liệu-----------------------------------------------
 const linkHeads = $$('.links-head > span');
 linkHeads.forEach((head, index) => {

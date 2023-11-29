@@ -19,42 +19,7 @@ function renderComics(item) {
 			</div>
 		</div>
 		<i class="fa-solid fa-circle-exclamation notice-btn"></i>
-		<div class="box-edit">
-			<div class="wrap-edit">
-				<span class="edit-repair">Áp dụng</span>
-				<span class="edit-delete">Xóa</span>
-			</div>
-			<div class="wrap-input">
-				<div class="input-name">
-					<div>
-						<label>Name Comic:</label>
-						<input type="text" name="nameComic" placeholder="Name Comic">
-					</div>
-					<div>
-						<label>Character:</label>
-						<input type="text" name="nameCharacter" placeholder="Name Character">
-					</div>
-				</div>
-				<div>
-					<label>Link Comic:</label>
-					<input type="text" name="linkComic" placeholder="Link Comic">
-				</div>
-				<div>
-					<label>Link Image:</label>
-					<input type="text" name="linkImage" placeholder="Link Image">
-				</div>
-				<div class="input-name">
-					<div>
-						<label>Genre:</label>
-						<input type="text" name="nameGenre" placeholder="Name Genre">
-					</div>
-					<div>
-						<label>Chapter:</label>
-						<input type="text" name="nameChapter" placeholder="Chapter">
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 	`)
 };
